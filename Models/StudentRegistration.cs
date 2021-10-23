@@ -35,7 +35,10 @@ namespace StudentRegistration.Models
         [Display(Name = "Major")]
         public MajorList Major { get; set; }
 
+    }
 
+    public class ExampleClass
+    {
         public static int Test(ref int a)
         {
             return a *= a;

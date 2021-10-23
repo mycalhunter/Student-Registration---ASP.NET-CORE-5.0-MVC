@@ -13,7 +13,7 @@
     @{
         /*
         Initialize 'int x = 10' as the variable
-        Pass 'x' as a reference through the Test method, located in the StudentRegistration namespace
+        Pass 'x' as a reference through the Test method, located in the ExampleClass namespace
         in the StudentRegistration.cs Model
 
         // Preview of Test method in StudentRegistration namespace
@@ -21,12 +21,15 @@
         perform calculation on value of x => a, then return the value as a reference
         to the View.. in this case, the Views/Home/Index.cshtml
 
-        public static int Test(ref int a)
+        public class ExampleClass
         {
-            return a *= a;
+            public static int Test(ref int a)
+            {
+                return a *= a;
+            }
         }
         */
         int x = 10;
-        @StudentRegistration.Test(ref x);
+        @ExampleClass.Test(ref x);
     }
 </div>
