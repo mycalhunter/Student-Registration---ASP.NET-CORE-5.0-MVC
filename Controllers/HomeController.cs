@@ -28,24 +28,6 @@ namespace StudentRegistration.Controllers
             return View();
         }
 
-        public IActionResult SignUp() // Registration
-        {
-            return View();
-        }
-
-        // POST - When registration form is submitted from /SignUp
-        [HttpPost]
-        public IActionResult SignUp(string Student)
-        {
-            if (ModelState.IsValid) // If form data is valid and authentic
-            {
-                return RedirectToAction("Index"); // redirect to home
-            } else
-            {
-                return RedirectToAction("SignUp"); // redirect to registration page
-            }
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

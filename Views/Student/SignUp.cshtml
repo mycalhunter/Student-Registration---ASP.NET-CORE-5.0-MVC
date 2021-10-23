@@ -1,10 +1,8 @@
 ﻿@model StudentRegistration
 
 @{
-    ViewData["Title"] = "Student Registration";
+    ViewData["Title"] = "SignUp";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    Html.AntiForgeryToken();
-    Html.BeginForm();
 }
 
 <h1>SignUp</h1>
@@ -22,8 +20,11 @@
             </div>
             <div class="form-group">
                 <label asp-for="Major" class="control-label"></label>
-                <input asp-for="Major" class="form-control" />
-                <span asp-validation-for="Major" class="text-danger"></span>
+                @Html.DropDownListFor(m => m.Major, new SelectList(Enum.GetValues(typeof(MajorList))), "Select Major")
+            </div>
+            <div class="form-group">
+                <label asp-for="DOB" class="control-label"></label>
+                <input class="form-control" asp-for="DOB" />
             </div>
             <div class="form-group">
                 <label asp-for="StudentAge" class="control-label"></label>
