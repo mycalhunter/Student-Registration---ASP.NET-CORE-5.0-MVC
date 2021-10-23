@@ -9,7 +9,7 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-<div class="text-warning">
+<div class="text-dark">
     @{
         /*
         Initialize 'int x = 10' as the variable
@@ -27,9 +27,27 @@
             {
                 return a *= a;
             }
+
+            public static string ExampleString(ref string b)
+            {
+                string strng = $"{b} is a great person!";
+                return strng;
+            }
         }
+
         */
         int x = 10;
-        @ExampleClass.Test(ref x);
+        @:Int is: @ExampleClass.ExampleInt(ref x)
+
+        <br />
+
+        string name = "Hunter";
+        @:String is: @ExampleClass.ExampleString(ref name)
+
+        <br />
+
+        bool response = true;
+        @:Bool is: @ExampleClass.ExampleBool(ref response)
+
     }
 </div>

@@ -39,9 +39,20 @@ namespace StudentRegistration.Models
 
     public class ExampleClass
     {
-        public static int Test(ref int a)
+        public static int ExampleInt(ref int a)
         {
             return a *= a;
+        }
+
+        public static string ExampleString(ref string b)
+        {
+            string strng = $"{b} is a great person!";
+            return strng;
+        }
+
+        public static bool ExampleBool(ref bool c)
+        {
+            return c;
         }
     }
 
