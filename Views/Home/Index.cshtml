@@ -13,17 +13,17 @@
     @{
         /*
         Initialize 'int x = 10' as the variable
-        Pass 'x' as a reference through the Test method, located in the ExampleClass namespace
+        Pass 'x' as a reference through the ExampleInt method, located in the ExampleClass namespace
         in the StudentRegistration.cs Model
 
-        // Preview of Test method in StudentRegistration namespace
+        // Preview of ExampleInt method in the ExampleClass class, in the StudentRegistration namespace
         Passing the value of 'x' in as a integer reference labeled 'a'
         perform calculation on value of x => a, then return the value as a reference
         to the View.. in this case, the Views/Home/Index.cshtml
 
         public class ExampleClass
         {
-            public static int Test(ref int a)
+            public static int ExampleInt(ref int a)
             {
                 return a *= a;
             }
@@ -32,6 +32,11 @@
             {
                 string strng = $"{b} is a great person!";
                 return strng;
+            }
+
+            public static bool ExampleBool(ref bool c)
+            {
+                return c;
             }
         }
 
